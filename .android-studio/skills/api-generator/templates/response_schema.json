@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserProfileResponse",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "The unique UUID of the user."
+    },
+    "username": {
+      "type": "string",
+      "description": "The display name chosen by the user."
+    },
+    "is_premium_member": {
+      "type": "boolean",
+      "description": "Indicates if the user has an active paid subscription."
+    },
+    "recent_workouts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "A list of the IDs for the user's most recent workout sessions."
+    }
+  },
+  "required": ["user_id", "username", "is_premium_member"]
+}

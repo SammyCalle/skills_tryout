@@ -1,0 +1,28 @@
+# 1. Local Environment & API Keys
+# Blocks the AI from reading local secrets and keys
+local.properties
+secrets.properties
+developer_config.json
+
+# 2. Third-Party Configs
+# Prevents exposure of external service credentials
+google-services.json
+amplifyconfiguration.json
+
+# 3. Security & Signing
+# Never let the AI read your keystores or signing properties
+*.jks
+*.keystore
+keystore.properties
+
+# 4. Proprietary Business Logic
+# Block specific packages containing sensitive intellectual property
+# (e.g., quantitative algorithms, proprietary terminal SDKs, or core security rules)
+app/src/main/java/com/yourdomain/app/pos_integration/
+app/src/main/java/com/yourdomain/app/trading_models/
+**/proprietary_core/
+
+# 5. Build Artifacts
+# Prevents context pollution from compiled code
+build/
+.gradle/
