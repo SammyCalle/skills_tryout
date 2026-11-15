@@ -1,0 +1,25 @@
+# detekt.yml
+Compose:
+  active: true
+
+  # Maps to compose-reviewer Rule 1 (Parameter Stability)
+  # Fails the build if a standard List, Set, or Map is passed to a Composable.
+  UnstableCollections:
+    active: true
+
+  # Maps to compose-reviewer Rule 4 (Lazy List Keys)
+  # Fails the build if LazyColumn/LazyRow items don't have a unique key.
+  ModifierWithoutDefault:
+    active: true
+
+  # Prevents passing ViewModels around, forcing hoisted state
+  ViewModelInjection:
+    active: true
+
+  # Prevents naming or structural issues in Compose
+  Naming:
+    active: true
+
+  # Enforces that all Modifiers are passed properly to avoid layout bugs
+  ModifierReused:
+    active: true
